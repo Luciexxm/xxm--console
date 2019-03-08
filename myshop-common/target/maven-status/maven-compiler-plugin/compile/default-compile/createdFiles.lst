@@ -1,0 +1,7 @@
+com\mmx\myshop\common\dto\BaseResult.class
+com\mmx\myshop\common\constants\HttpStatusConstant.class
+com\mmx\myshop\common\dto\BaseResult$Error.class
+com\mmx\myshop\common\utils\CookiesUtil.class
+com\mmx\myshop\common\utils\RegexpUtils.class
+com\mmx\myshop\common\utils\BeanValidator.class
+com\mmx\myshop\common\utils\IDUtils.class

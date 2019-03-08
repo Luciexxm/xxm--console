@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>myshop</artifactId>
+        <groupId>com.mmx</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>myshop-dependencies</artifactId>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!-- 环境配置 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+
+        <spring.version>4.3.17.RELEASE</spring.version>
+        <druid.version>1.1.10</druid.version>
+        <mysql.version>5.1.47</mysql.version>
+        <spring.mvc.version>4.3.17.RELEASE</spring.mvc.version>
+        <slf4j.vsersion>1.7.25</slf4j.vsersion>
+        <junit.version>4.12</junit.version>
+        <servlet.version>3.1.0</servlet.version>
+        <common.version>3.5</common.version>
+        <mybastic.version>3.4.6</mybastic.version>
+        <mybastic.spring.version>1.3.2</mybastic.spring.version>
+        <spring.jdbc.version>4.3.17.RELEASE</spring.jdbc.version>
+        <spring-test.version>4.3.17.RELEASE</spring-test.version>
+        <lombok.version>1.18.2</lombok.version>
+        <velocity.version>2.0</velocity.version>
+        <slf4j.spi.version>1.7.25</slf4j.spi.version>
+        <jstl.version>1.2</jstl.version>
+        <jackson.version>2.9.5</jackson.version>
+        <spring-validator>5.4.2.Final</spring-validator>
+        <javaxel.version>2.2.4</javaxel.version>
+        <glassfish.version>2.2.4</glassfish.version>
+        <file.update.version>1.3.2</file.update.version>
+        <ueditor.version>1.0.0</ueditor.version>
+        <commons-io.version>2.5</commons-io.version>
+    </properties>
+
+    <name>myshop-dependencies</name>
+    <description></description>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--Spring  start-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.mvc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${spring-validator}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.el</groupId>
+                <artifactId>javax.el-api</artifactId>
+                <version>${javaxel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.web</groupId>
+                <artifactId>javax.el</artifactId>
+                <version>${glassfish.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybastic.spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.jdbc.version}</version>
+            </dependency>
+
+            <!--Spring end-->
+
+
+            <!--druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--druid-->
+
+            <!-- slf4j-->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.vsersion}</version>
+            </dependency>
+
+            <!-- slf4j-->
+
+            <!--junit-->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring-test.version}</version>
+            </dependency>
+
+            <!--junit-->
+
+
+            <!--servlet-->
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--servlet-->
+
+            <!--commons-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <!--commons-->
+
+            <!-- mybatis-->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybastic.version}</version>
+            </dependency>
+
+            <!-- mybatis-->
+
+            <!--jstl-->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${jstl.version}</version>
+            </dependency>
+            <!--jstl-->
+
+            <!--lomkob-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--lomkob-->
+
+            <!--json-->
+            <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <!--json-->
+
+            <!-- file update-->
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${file.update.version}</version>
+            </dependency>
+            <!-- file update-->
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+    <plugins>
+        <!-- Compiler 插件, 设定 JDK 版本 -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
+            <configuration>
+                <source>${java.version}</source>
+                <target>${java.version}</target>
+                <encoding>${project.build.sourceEncoding}</encoding>
+                <showWarnings>true</showWarnings>
+            </configuration>
+        </plugin>
+    </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mmx.myshop.admin.dao.TbUserDao">
+    <sql id="select">
+        a.id,
+        a.username,
+        a.password,
+        a.phone,
+        a.email,
+        a.created,
+        a.updated
+    </sql>
+    <select id="selectAll" resultType="TbUser">
+        SELECT
+      <include refid="select"/>
+        FROM
+        tb_user AS a
+    </select>
+    
+    <select id="dataTable" resultType="TbUser" >
+        SELECT
+        <include refid="select"/>
+        FROM
+        tb_user AS a
+        <where>
+            <if test="username != null and username != '' ">
+                AND username LIKE CONCAT('%',#{username},'%')
+            </if>
+            <if test="email != null and email !=''">
+                AND email LIKE CONCAT('%',#{email},'%')
+            </if>
+            <if test="phone != null and phone != ''">
+                AND phone LIKE CONCAT(#{phone},'%')
+            </if>
+        </where>
+        limit #{start},#{length}
+    </select>
+
+<insert id="insert">
+   INSERT INTO tb_user (
+      username,
+      password,
+      phone,
+      email,
+      created,
+      updated
+    )
+    VALUES
+      (
+        #{username},
+        #{password},
+        #{phone},
+        #{email},
+        #{created},
+        #{updated}
+      )
+</insert>
+    
+    <delete id="delete">
+        DELETE FROM  tb_user WHERE id= #{id};
+    </delete>
+
+
+   <select id="getById" resultType="TbUser" >
+    SELECT
+       <include refid="select"/>
+        FROM
+        tb_user AS a
+     WHERE
+        a.id =#{id};
+    </select>
+
+   <update id="update">
+       UPDATE
+        tb_user
+        SET
+        username=#{username},
+        password =#{password},
+        phone =#{phone},
+        email=#{email},
+        updated =#{updated}
+        where
+         id=#{id}
+    </update>
+
+    <select id="getAdminByemail" resultType="tbUser">
+        SELECT
+        <include refid="select"/>
+      FROM
+     tb_user AS a
+      WHERE
+      email=#{email};
+    </select>
+        
+    <select id="count" resultType="Integer">
+        SELECT COUNT(*)
+          FROM tb_user
+        <where>
+            <if test="username != null and username != '' ">
+                AND username LIKE CONCAT('%',#{username},'%')
+            </if>
+            <if test="email != null and email !=''">
+                AND email LIKE CONCAT('%',#{email},'%')
+            </if>
+            <if test="phone != null and phone != ''">
+                AND phone LIKE CONCAT(#{phone},'%')
+            </if>
+        </where>
+    </select>
+    <delete id="deleteMulti">
+        DELETE FROM tb_user
+        WHERE id IN
+        <if test="array != null and array.length > 0">
+            <foreach collection="array" open="(" close=")" item="id" separator=",">
+                #{id}
+            </foreach>
+        </if>
+    </delete>
+
+</mapper>

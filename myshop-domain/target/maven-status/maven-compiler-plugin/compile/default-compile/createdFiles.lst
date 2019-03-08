@@ -1,0 +1,7 @@
+com\mmx\myshop\domain\TbItemDesc.class
+com\mmx\myshop\domain\TbItem.class
+com\mmx\myshop\domain\TbContentCategory.class
+com\mmx\myshop\domain\TbItemCat.class
+com\mmx\myshop\domain\TbUser.class
+com\mmx\myshop\domain\TbContent.class
+com\mmx\myshop\domain\BaseEntity.class
