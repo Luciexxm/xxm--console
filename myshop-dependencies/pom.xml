@@ -35,11 +35,11 @@
         <velocity.version>2.0</velocity.version>
         <slf4j.spi.version>1.7.25</slf4j.spi.version>
         <jstl.version>1.2</jstl.version>
-        <jackson.version>2.9.5</jackson.version>
+        <jackson.version>2.9.8</jackson.version>
         <spring-validator>5.4.2.Final</spring-validator>
         <javaxel.version>2.2.4</javaxel.version>
         <glassfish.version>2.2.4</glassfish.version>
-        <file.update.version>1.3.2</file.update.version>
+        <file.update.version>1.3.3</file.update.version>
         <ueditor.version>1.0.0</ueditor.version>
         <commons-io.version>2.5</commons-io.version>
     </properties>
